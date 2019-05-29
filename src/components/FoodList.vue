@@ -1,15 +1,21 @@
 <template>
   <v-container>
     <v-layout>
+      <draggable v-model="foodList">
       <v-flex :key="food.name" v-for="food in foodList">
         {{food.name}}
       </v-flex>
+      </draggable>
     </v-layout>
   </v-container>
 </template>
 
 <script>
+import draggable from 'vuedraggable'
   export default {
+    components: {
+      draggable
+    },
     data: () => ({
       foodList: [
         {name: 'Apple', color: 'green', qty: 3},
@@ -24,3 +30,7 @@
 <style>
 
 </style>
+
+--TO DO--
+()
+---------
